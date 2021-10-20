@@ -1,0 +1,27 @@
+<%= form_with(model: pastum, local: true) do |form| %>
+  <% if pastum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pastum.errors.count, "error") %> prohibited this pastum from being saved:</h2>
+
+      <ul>
+      <% pastum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :id_pasta %>
+    <%= form.text_field :id_pasta %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @pastum.nome %>
+</p>
+
+<p>
+  <strong>Id pasta:</strong>
+  <%= @pastum.id_pasta %>
+</p>
+
+<%= link_to 'Edit', edit_pastum_path(@pastum) %> |
+<%= link_to 'Back', pasta_path %>
